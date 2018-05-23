@@ -1,0 +1,101 @@
+
+
+<div >
+    
+        <section   style="float: left; width: 65%"  >
+            <form  class="contact_form" action="#" id="contact_form" runat="server">  
+                <div>  
+                    <ul class="col-xs-7 col-md-9 col-xl-11" >  
+                        <li>  
+                            <span  style="font-size: 30px;width: 60%; ">Sala de Preguntas</span>  
+                            <span *ngIf="(message.errors && (message.dirty || message.touched))||(name.errors && (name.dirty || name.touched))" class="required_notification">* Datos requeridos</span>  
+                        </li>  
+                        <li>  
+                            <label for="name">Nombre:</label>  
+                            <input type="text" name="name" id="name" [(ngModel)]="model" #name="ngModel" placeholder="Nombre de tu sala" required /> 
+                        </li>  
+                        <li>  
+                            <label for="message">Descripción:</label>  
+                            <textarea name="message" id="message" cols="40" rows="4" maxlength="100" [(ngModel)]="model2" #message="ngModel" required></textarea>  
+                        </li>
+                        <li>  
+                            <label for="message">Categoría:</label>  
+                            <select style="height: 32px;" name="cars" required>
+                                <option value="" disabled selected>Selecciona una categoría</option>
+                                <option value="volvo">Programación</option>
+                                <option value="saab">Matemática</option>
+                                <option value="fiat">Finanzas</option>
+                                <option value="audi">Medicina</option>
+                            </select> 
+                        </li>        
+                        <li>  
+                            
+                            <div>
+                                <label style="padding-top: 20px">Fecha:</label>  
+                                <mat-form-field >
+                                    <input style="border:none; box-shadow:none; margin-bottom: -10px; margin: none" #fech_hora_ini="ngModel" name="fech_hora_ini" [(ngModel)]="evento" matInput [min]="minDate" [matDatepicker]="picker3"  [value]="date.value" required>
+                                    <mat-datepicker-toggle matSuffix [for]="picker3"></mat-datepicker-toggle>
+                                    <mat-datepicker #picker3></mat-datepicker>
+                                </mat-form-field>
+                            </div>
+                        </li>      
+                        <li>  
+                            <label for="hora">Hora:</label>  
+                                <input style="width: 120px; display: block" name="hora" [(ngModel)]="horas" #hora="ngModel"  required  [owlDateTimeTrigger]="dt4" [owlDateTime]="dt4">
+                                <owl-date-time [pickerType]="'timer'" #dt4></owl-date-time>
+                            
+                        </li>
+                        <li>  
+                            <label for="parti">Participantes:</label>  
+                            <input style="width: 60px; " min="2" max="20" value="2"  type="number"  name="points" id="parti" [(ngModel)]="partis" #parti="ngModel" required>
+                            
+                        </li>               
+                        <li >  
+                            <button [routerLink]="['/sala2']" class="btn btn-primary"  type="submit">Confirmar</button>  
+                        </li>  
+                    </ul>  
+                </div>  
+            </form> 
+        </section>
+        <section style="float: right; width: 25%; margin-right: 30px; " >
+
+        
+
+                    <form class="" action="#" id="" runat="server" >
+
+                           
+                            <table mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8">
+
+                                    
+                                    <ng-container matColumnDef="position">
+                                      <th mat-header-cell *matHeaderCellDef style="font-size: 20px"> Ranking <span style="float: right;">👑</span> </th>
+                                      <td  mat-cell *matCellDef="let element"> {{element.position}} </td>
+                                    </ng-container>
+                                  
+                                    <ng-container matColumnDef="name">
+                                      <th mat-header-cell *matHeaderCellDef>  </th>
+                                      <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+                                    </ng-container>
+
+                                    <ng-container matColumnDef="puntos">
+                                            <th mat-header-cell *matHeaderCellDef> </th>
+                                            <td mat-cell *matCellDef="let element"> {{element.puntos}} </td>
+                                          </ng-container>
+                                  
+                                  
+                                    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                                    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+                                  </table>
+                            <div style="margin-left: 70px" [routerLink]="['/ranking']">
+                                <span style="font-size: 10px" >Ver ranking completo</span>
+                            </div>
+                    </form>
+                    
+
+            
+                
+                  
+        </section>
+    
+            
+</div>

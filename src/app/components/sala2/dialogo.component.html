@@ -1,0 +1,15 @@
+
+
+
+<div mat-dialog-content>
+  <p>Ingrese su pregunta</p>
+  <mat-form-field>
+    <input matInput [(ngModel)]="data.animal">
+
+    <br>
+    
+  </mat-form-field>
+</div>
+<div mat-dialog-actions>
+  <button  mat-button [mat-dialog-close]="data.animal" cdkFocusInitial>Ok</button>
+</div>

@@ -1,0 +1,122 @@
+
+
+p {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+*, :after, :before {
+    box-sizing: inherit;
+}
+p {
+    display: block;
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+}
+.notification-single {
+    position: relative;
+    width: 100%;
+    padding-left: 45px;
+    padding-bottom: 20px;
+}
+.notification-single .details {
+    color: #63737b;
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+.notification-single .details a {
+    color: #2a3134;
+    padding-right: 5px;
+}
+.notification-single .avatar.avatar-icon {
+    background: rgba(63,81,181,.3);
+    color: #3f51b5;
+    font-size: 12px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    box-shadow: 0 6px 25px 0 rgba(38,50,56,.2);
+}
+.notification-single .avatar {
+    background-position: 50%!important;
+    background-repeat: no-repeat!important;
+    background-size: cover!important;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    left: 0;
+    border-radius: 50%;
+    box-shadow: 0 6px 25px 0 rgba(38,50,56,.2);
+    overflow: hidden;
+}
+.notification-single .time {
+    font-size: 12px;
+    color: #98a6ac;
+    margin: 0;
+}
+
+*, :after, :before {
+    box-sizing: inherit;
+}
+div {
+    display: block;
+}
+
+.slide-content.toggle {
+    right: 0;
+}
+.slide-content, .slide-content.toggle {
+    transition: all .3s ease;
+}
+
+.slide-content {
+    position: fixed;
+    top: 64px;
+    right: -300px;
+    width: 300px;
+    background: #fff;
+    height: calc(100% - 55px);
+    padding: 20px;
+    overflow: scroll;
+    border-top: 2px solid #40c741;
+    box-shadow: 0 6px 25px 0 rgba(38,50,56,.2);
+}
+.slide-content h6 {
+    padding-bottom: 20px;
+}
+h4, h5, h6 {
+    font-weight: 400;
+}
+.h6, h6 {
+    font-size: 1rem;
+}
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+    margin-bottom: .5rem;
+    font-family: inherit;
+    font-weight: 500;
+    line-height: 1.1;
+    color: #2a3134;
+}
+h1, h2, h3, h4, h5, h6 {
+    margin-top: 0;
+    margin-bottom: .5rem;
+}
+*, :after, :before {
+    box-sizing: inherit;
+}
+h6 {
+    display: block;
+    font-size: 0.67em;
+    -webkit-margin-before: 2.33em;
+    -webkit-margin-after: 2.33em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    font-weight: bold;
+}

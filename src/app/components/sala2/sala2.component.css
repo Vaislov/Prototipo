@@ -1,0 +1,65 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  h2{
+    padding: 2px;
+    margin-top: 1px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 100%;
+  }
+
+  
+  section{
+    
+    margin-right: 20px;
+    margin-left: 20px;
+    padding: 0%;
+  }
+  
+  form {
+      
+    padding-right: 2em;
+    padding-left: 2em;
+    padding-bottom: 2em;
+    padding-top: 1em;
+    border: 1px solid #c1c1c1;
+  }
+
+  
+  table {
+    width: 100%;
+    
+  }
+  
+  .texto {
+    max-width: 200px;
+  }
+  
+  /* === List Styles === */  
+  .contact_form ul {  
+    list-style-type: none;  
+    list-style-position: outside;  
+    margin: 0px;  
+    padding: 0px;  
+  }  
+  
+  .contact_form li {  
+    padding: 12px;  
+  }  
+  
+  .contact_form li:first-child, .contact_form li:last-child {  
+      border-bottom: 1px solid #777;  
+  }  
+  
+  .demo-chip-list {
+    width: 100%;
+  }
+  
+  
+  
+  
+  
+  
+  
